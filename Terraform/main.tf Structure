@@ -1,17 +1,1 @@
-# Main Terraform configuration
-module "vpc" {
-  source = "./modules/vpc"
-  # variables...
-}
 
-module "alb" {
-  source = "./modules/alb"
-  vpc_id = module.vpc.vpc_id
-  # other variables...
-}
-
-module "ecs" {
-  source = "./modules/ecs"
-  vpc_id = module.vpc.vpc_id
-  # other variables...
-}
